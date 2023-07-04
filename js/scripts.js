@@ -50,3 +50,7 @@ let pokemonList = [
         types: ['psychic', 'grass']
     },
 ];
+
+for (let i = 0; i <= pokemonList.length - 1; i++) {
+    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')<br>');
+}
