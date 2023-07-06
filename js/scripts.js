@@ -51,12 +51,12 @@ let pokemonList = [
     },
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-    
-    // Check the pokemons height
-    if (pokemonList[i].height > 5.5) {
-        document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - Wow, that\'s big!<br>');
+pokemonList.forEach(function(pokemon) {
+    if (pokemon.types.length == 2) {
+        document.write(pokemon.name + ' is ' + pokemon.height + 'm tall and has the types ' 
+        + pokemon.types[0] + ' and ' + pokemon.types[1] + '.<br>');
     } else {
-        document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')<br>');
+        document.write(pokemon.name + ' is ' + pokemon.height + 'm tall and has the type ' 
+        + pokemon.types + '.<br>');
     }
-}
+});
