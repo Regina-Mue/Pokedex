@@ -1,4 +1,4 @@
-(function () {
+let pokedex = (function () {
 
     let pokemonList = [
         {   
@@ -54,9 +54,9 @@
     ];
   
     return {
-      pokedex: pokemonList
+        pokemonRepository: pokedex
     };
-    
+
 })();
 
 pokemonList.forEach(function(pokemon) {
