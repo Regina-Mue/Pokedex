@@ -52,11 +52,23 @@ let pokedex = (function () {
             types: ['psychic', 'grass']
         },
     ];
+})();
+
+let pokemonRepository = (function () {
+    let pokemonList = [];
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    function getAll() {
+        return pokemonList
+    }
   
     return {
-        pokemonRepository: pokedex
+        add: add,
+        getAll: getAll
     };
-
 })();
 
 pokemonList.forEach(function(pokemon) {
