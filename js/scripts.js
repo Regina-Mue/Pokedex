@@ -57,7 +57,7 @@ let pokemonRepository = (function () {
     }
 
     function getAll() {
-        return pokemonList
+        return pokemonList;
     }
   
     return {
@@ -66,7 +66,7 @@ let pokemonRepository = (function () {
     };
 })();
 
-pokemonList.forEach(function(pokemon) {
+pokemonRepository.getAll().forEach(function(pokemon) {
     if (pokemon.types.length == 2) {
         document.write(pokemon.name + ' is ' + pokemon.height + 'm tall and has the types ' 
         + pokemon.types[0] + ' and ' + pokemon.types[1] + '.<br>');
