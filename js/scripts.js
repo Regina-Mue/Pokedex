@@ -1,5 +1,4 @@
-let pokedex = (function () {
-
+let pokemonRepository = (function () {
     let pokemonList = [
         {   
             name: 'Arceus',
@@ -52,10 +51,6 @@ let pokedex = (function () {
             types: ['psychic', 'grass']
         },
     ];
-})();
-
-let pokemonRepository = (function () {
-    let pokemonList = [];
 
     function add(pokemon) {
         pokemonList.push(pokemon);
