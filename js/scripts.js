@@ -67,7 +67,10 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-    let unorderedList = document.querySelector(ul);
+    let unorderedList = document.querySelector('ul');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
 
     /*
     if (pokemon.types.length == 2) {
