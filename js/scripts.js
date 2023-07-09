@@ -62,11 +62,12 @@ let pokemonRepository = (function () {
   
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 
     function addListItem(pokemon) {
-        let unorderedList = document.querySelector('ul');
+        let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
 
         let button = document.createElement('button');
@@ -74,13 +75,16 @@ let pokemonRepository = (function () {
         button.classList.add();
 
         listItem.appendChild(button);
-        unorderedList.appendChild(listItem);
+        pokemonList.appendChild(listItem);
     }
 
 })();
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-    let unorderedList = document.querySelector('ul');
+    
+    
+    /*
+    let pokemonList = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
 
     let button = document.createElement('button');
@@ -88,9 +92,9 @@ pokemonRepository.getAll().forEach(function(pokemon) {
     button.classList.add();
 
     listItem.appendChild(button);
-    unorderedList.appendChild(listItem);
+    pokemonList.appendChild(listItem);
 
-    /*
+    
     if (pokemon.types.length == 2) {
         document.write(pokemon.name + ' is ' + pokemon.height + 'm tall and has the types ' 
         + pokemon.types[0] + ' and ' + pokemon.types[1] + '.<br>');
