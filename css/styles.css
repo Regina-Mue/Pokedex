@@ -1,4 +1,4 @@
-button {
+.button {
   background-color: #FFCC00;
   border-radius: 12px;
   color: #000;
@@ -17,14 +17,14 @@ button {
   margin: 5px;
 }
 
-button:not(:disabled):hover,
-button:not(:disabled):focus {
+.button:not(:disabled):hover,
+.button:not(:disabled):focus {
   outline: 0;
   background: #FFCC00;
   box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
 }
 
-button:disabled {
+.button:disabled {
   filter: saturate(0.2) opacity(0.5);
   -webkit-filter: saturate(0.2) opacity(0.5);
   cursor: not-allowed;
