@@ -67,6 +67,9 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.getAll().forEach(function(pokemon) {
+    let unorderedList = document.querySelector(ul);
+
+    /*
     if (pokemon.types.length == 2) {
         document.write(pokemon.name + ' is ' + pokemon.height + 'm tall and has the types ' 
         + pokemon.types[0] + ' and ' + pokemon.types[1] + '.<br>');
@@ -74,4 +77,5 @@ pokemonRepository.getAll().forEach(function(pokemon) {
         document.write(pokemon.name + ' is ' + pokemon.height + 'm tall and has the type ' 
         + pokemon.types + '.<br>');
     }
+    */
 });
