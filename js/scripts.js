@@ -52,10 +52,12 @@ let pokemonRepository = (function () {
         },
     ];
 
+    // add pokemons to array
     function add(pokemon) {
         pokemonList.push(pokemon);
     }
 
+    // return the array
     function getAll() {
         return pokemonList;
     }
@@ -76,6 +78,7 @@ let pokemonRepository = (function () {
         });
     }
 
+    // returns a single pokemon as an object
     function showDetails(pokemon) {
         console.log(pokemon);
     }
@@ -88,6 +91,7 @@ let pokemonRepository = (function () {
 
 })();
 
+// shows all the details about the selected pokemon
 pokemonRepository.getAll().forEach(function(pokemon) { 
     pokemonRepository.addListItem(pokemon);
 });
