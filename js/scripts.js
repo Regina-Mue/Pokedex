@@ -4,7 +4,11 @@ let pokemonRepository = (function () {
 
     // add pokemons to array
     function add(pokemon) {
-        pokemonList.push(pokemon);
+        if (typeof pokemon === 'object') {
+            pokemonList.push(pokemon);
+        } else {
+            console.log('pokemon input is not correct');
+        }
     }
 
     // return the array
@@ -25,13 +29,6 @@ let pokemonRepository = (function () {
 
         button.addEventListener('click', function (event) {
             showDetails(pokemon.name);
-        });
-    }
-
-    // returns a single pokemon as an object
-    function showDetails(pokemon) {
-        loadDetails(pokemon).then(function() {
-            console.log(pokemon);
         });
     }
 
@@ -65,10 +62,17 @@ let pokemonRepository = (function () {
         });
     }
 
+    // returns a single pokemon as an object
+    function showDetails(pokemon) {
+        loadDetails(pokemon).then(function() {
+            console.log(pokemon);
+        });
+    }
+
     return {
-        add: add,
         getAll: getAll,
         loadList: loadList,
+        addListItem: addListItem,
         loadDetails: loadDetails
     };
 
