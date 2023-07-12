@@ -28,7 +28,7 @@ let pokemonRepository = (function () {
         pokemonList.appendChild(listItem);
 
         button.addEventListener('click', function (event) {
-            showDetails(pokemon.name);
+            showDetails(pokemon);
         });
     }
 
@@ -64,16 +64,18 @@ let pokemonRepository = (function () {
 
     // returns a single pokemon as an object
     function showDetails(pokemon) {
-        loadDetails(pokemon).then(function() {
+        pokemonRepository.loadDetails(pokemon).then(function() {
             console.log(pokemon);
         });
     }
 
     return {
+        add: add,
         getAll: getAll,
-        loadList: loadList,
         addListItem: addListItem,
-        loadDetails: loadDetails
+        loadList: loadList,
+        loadDetails: loadDetails, 
+        showDetails: showDetails
     };
 
 })();
