@@ -66,7 +66,7 @@ let pokemonRepository = (function () {
     // returns a single pokemon as an object
     function showDetails(pokemon) {
         pokemonRepository.loadDetails(pokemon).then(function() {
-            //console.log(pokemon);
+            console.log(pokemon);
   
             modalContainer.innerHTML = '';
             let modal = document.createElement('div');
@@ -88,9 +88,11 @@ let pokemonRepository = (function () {
 
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
-            modal.appendChild(contentElement);
+            modal.appendChild(imageElement);
             modal.appendChild(contentElement);
             modalContainer.appendChild(modal);
+
+            imageElement.classList.add('img');
 
             modalContainer.classList.add('is-visible');
 
@@ -109,9 +111,6 @@ let pokemonRepository = (function () {
         modalContainer.classList.remove('is-visible');
     }
 
-    document.querySelector('pokemon.listItem').addEventListener('click', () => {
-        showDetails(pokemon);
-    });
 
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
