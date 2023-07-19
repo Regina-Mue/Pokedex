@@ -1,38 +1,9 @@
-.button {
-  background-color: #FFCC00;
-  border-radius: 12px;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 10px 15px;
-  text-align: center;
-  transition: 200ms;
+.btn {
   width: 40%;
-  box-sizing: border-box;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin: 5px;
-  
 }
 
 .container {
   text-align: center;
-}
-
-.button:not(:disabled):hover,
-.button:not(:disabled):focus {
-  outline: 0;
-  background: #FFCC00;
-  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
-}
-
-.button:disabled {
-  filter: saturate(0.2) opacity(0.5);
-  -webkit-filter: saturate(0.2) opacity(0.5);
-  cursor: not-allowed;
 }
 
 #modal-container {
@@ -102,7 +73,7 @@ li {
 }
 
 @media only screen and (min-width: 310px) and (max-width: 480px){
-  .button {
+  .btn {
     width: 80%;
   }
   .img {
