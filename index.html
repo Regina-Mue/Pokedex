@@ -12,28 +12,42 @@
     </head>
     <body>
 
-        <div class="container">
-            <h1>Pokedex</h1>
+        <!-- Navbar -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="css/pokeball.png" alt="Pokeball" class="d-inline-block align-text-top logo">
+                    <h1>Pokedex</h1>
+                </a>
+            </div>
+        </nav>
+        <form class="d-flex form-inline justify-content-center mb-4" role="search">
+            <input class="form-control col-10 container" type="search" placeholder="Search pokemon name" aria-label="Search" id="input">
+        </form>
+
+        <div class="justify-content-center">
             <ul class="list-group pokemon-list"></ul>
         </div>
-
-        <!-- Modal container -->
-        <!-- <div id="modal-container"></div> -->
-
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog">
+  
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img class="PokomoneImg" src="#" alt="" width="180" height="180">
+                            <div class="pokemonHeight fs-6 fw-bold">
+                            </div>
+                            <div class="pokemonWeight fs-6 fw-bold">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
