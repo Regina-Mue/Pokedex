@@ -63,6 +63,7 @@ let pokemonRepository = (function () {
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
             item.types = details.types;
+            item.weight = details.weight;
         }).catch(function (e) {
             console.error(e);
         });
@@ -94,10 +95,10 @@ let pokemonRepository = (function () {
             title.innerText = pokemon.name.toUpperCase();
 
             let height = document.querySelector(".pokemonHeight");
-            height.innerText = "Height: " + pokemon.height + "M";
+            height.innerText = "Height: " + pokemon.height + " m";
 
             let weight = document.querySelector(".pokemonWeight");
-            weight.innerText = "Weight: " + pokemon.weight + "KG";
+            weight.innerText = "Weight: " + pokemon.weight + " kg";
 
             let imgDetails = document.querySelector(".PokomoneImg");
             imgDetails.src = pokemon.imageUrl;
