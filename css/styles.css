@@ -1,3 +1,12 @@
+body {
+  background-color: #FFCC00;
+}
+
+.list-color {
+  background-color: #FFCC00;
+  border: transparent;
+}
+
 .btn {
   width: 40%;
 }
@@ -70,6 +79,11 @@ li {
 
 .img {
   width: 30%;
+}
+
+.logo {
+  float: left;
+  margin: 12px 3px 0 0;
 }
 
 @media only screen and (min-width: 310px) and (max-width: 480px){
