@@ -1,5 +1,6 @@
 body {
   background-color: #2E4F4F;
+  overflow-x: hidden;
 }
 
 .list-color {
