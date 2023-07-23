@@ -1,14 +1,15 @@
 body {
-  background-color: #FFCC00;
+  background-color: #2E4F4F;
 }
 
 .list-color {
-  background-color: #FFCC00;
+  background-color: #2E4F4F;
   border: transparent;
 }
 
 .btn {
   width: 40%;
+  background-color: #0E8388;
 }
 
 .container {
@@ -21,7 +22,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rbga(0,0,0,0.5);
   z-index: 999; 
   display: grid;
   text-align: center;
@@ -34,12 +35,13 @@ body {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  background: #fff;
+  background: #2E4F4F;
   padding: 15px;
   width: 60%;
   max-width: 700px;
   height: 70%;
   border-radius: 10px;
+  color: #CBE4DE;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -54,7 +56,15 @@ body {
   text-decoration: underline;
 }
 
-.modal h1 {
+.modal-header {
+  background-color: #0E8388;
+}
+
+.modal-body {
+  background-color: #2E4F4F;
+}
+
+.modal h5 {
   margin-top: 0;
   font-size: 24px;
   text-transform: capitalize;
