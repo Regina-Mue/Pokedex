@@ -28,7 +28,7 @@ let pokemonRepository = (function () {
         button.setAttribute("data-target", "#exampleModal");
         button.classList.add("btn-secondary", "mt-1", "p-2", "border-0", "fs-5", "btn", "btn-danger");
 
-        button.innerText = pokemon.name;
+        button.innerText = pokemon.name[0].toUpperCase() + pokemon.name.substring(1);
 
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
