@@ -21,8 +21,6 @@ This Pokédex and its creator owe a big thanks to PokeAPI and its creators, beca
 
 I'd also like to thank CareerFoundry, my tutor Ignatius for helping me throughout this project's creation.
 
-If any of you trainers/users have thoughts on how I can improve the Pokédex, or even this README, don't hesitate to reach out! Here's my personal contact page.
-
 Images of app
 Desktop version of app:
 
