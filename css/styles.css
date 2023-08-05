@@ -1,16 +1,35 @@
 body {
-  background-color: #2E4F4F;
+  background-color: #3B4CCA;
   overflow-x: hidden;
 }
 
-.list-color {
-  background-color: #2E4F4F;
+h1 {
+  color: #FFDE00;
+  cursor: default;
+}
+
+.list-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.list-group-item {
+  background-color: #3B4CCA;
   border: transparent;
+  border-color: #FFFFFF;
+  padding: 5px;
 }
 
 .btn {
-  width: 40%;
-  background-color: #0E8388;
+  width: 80%;
+  background-color: #FFDE00;
+  color: #3B4CCA;
+}
+
+.btn:hover {
+  background-color: #CC0000;
+  color: #FFDE00;
 }
 
 .container {
@@ -37,15 +56,15 @@ body {
   display: inline-block;
   box-sizing: border-box;
   background: #2E4F4F;
-  padding: 15px;
-  width: 60%;
   max-width: 700px;
-  height: 70%;
   border-radius: 10px;
   color: #CBE4DE;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 300px;
+  height: 360px;
+  padding: 15px;
 }
 
 .modal-close {
@@ -53,16 +72,17 @@ body {
   /*-webkit-appearance: none;*/
   border: 0;
   background: none;
-  color: #777;
-  text-decoration: underline;
+  color: #CBE4DE;
 }
 
 .modal-header {
   background-color: #0E8388;
+  border: transparent;
 }
 
 .modal-body {
   background-color: #2E4F4F;
+  border: transparent;
 }
 
 .modal h5 {
@@ -80,21 +100,31 @@ li {
   list-style: none;
 }
 
-.img {
-  width: 30%;
-}
-
-.logo {
-  float: left;
-  margin: 12px 3px 0 0;
-}
-
-@media only screen and (min-width: 310px) and (max-width: 480px){
-  .btn {
-    width: 80%;
+@media all and (max-width: 500px) {
+  .list-group {
+    grid-template-columns: 1fr;
   }
-  .img {
-    width: 60%;
-    margin: auto;
+
+  .modal {
+    width: 70%;
+    height: 390px;
+    padding: 7%;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .list-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .list-group {
+    grid-gap: 10px;
+  }
+
+  .list-group-item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
   }
 }
