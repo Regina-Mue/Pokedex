@@ -99,7 +99,7 @@ let pokemonRepository = (function () {
         weight.innerText = "";
 
         let imgDetails = document.querySelector(".PokomoneImg");
-        imgDetails.src = null;
+        imgDetails.src = "";
 
         pokemonRepository.loadDetails(pokemon).then(function() {
 
@@ -118,10 +118,11 @@ let pokemonRepository = (function () {
                 // Since this is also triggered when clicking INSIDE the modal
                 // We only want to close if the user clicks directly on the overlay
                 let target = e.target;
+                console.log(target);
                 if (target === modalContainer) {
                     hideModal();
                 }
-            });
+            }); 
         });
     }
 
